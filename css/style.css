@@ -1,0 +1,241 @@
+html{ height: 100%; position: static; width: 100%; }
+body{ background-color: #FFF; color: #000; height: 100%; position: static; width: 100%; }
+*{ box-sizing: border-box; font-family: 'Josefin Sans', sans-serif; font-size: 13px; margin: 0 auto; padding: 0; position: relative; 
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+*:focus{ outline: none; }
+a{ color: #07B; transition: color 250ms ease;
+  -webkit-transition: color 250ms ease;
+  -moz-transition: color 250ms ease;
+  -ms-transition: color 250ms ease;
+  -o-transition: color 250ms ease;
+}
+a:hover{ color: #09F; }
+
+/* Global classes *************************************************************/
+/******************************************************************************/
+.clear{ clear: both; }
+
+/* Icons **********************************************************************/
+/******************************************************************************/
+@font-face 
+{
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"),
+       local('MaterialIcons-Regular'),
+       url(/fonts/MaterialIcons-Regular.woff2) format("woff2"),
+       url(/fonts/MaterialIcons-Regular.woff) format("woff"),
+       url(/fonts/MaterialIcons-Regular.ttf) format("truetype");
+}
+.material-icons { direction: ltr; display: inline-block; font-family: "Material Icons"; font-size: 24px; font-style: normal; font-weight: normal; letter-spacing: normal; line-height: 1; text-transform: none; white-space: nowrap; word-wrap: normal;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: "liga";
+}
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 37px; }
+.material-icons.md-48 { font-size: 48px; }
+.material-icons.md-rotate-180{ transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+.material-icons.md-dark { color: rgba(0, 0, 0, 0.54); }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.75); }
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.75); }
+
+/* Mathblocks *****************************************************************/
+/******************************************************************************/
+#js-mathblocks{ background-color: #FFF; bottom: 0; height: 480px; left: 0; margin: auto; overflow: hidden; position: absolute; right: 0; top: 0; width: 320px; }
+
+/* Header *********************************************************************/
+/******************************************************************************/
+#js-mathblocks #js-header{ height: 50px; left: 0; position: absolute; top: 0; width: 100%; }
+#js-mathblocks #js-header .js-menu-toggle{ background-color: #DDD; cursor: pointer; height: 45px; left: 2px; position: absolute; text-align: center; top: 2px; transition: box-shadow 250ms ease; width: 40px;
+  -webkit-transition: box-shadow 250ms ease;
+  -moz-transition: box-shadow 250ms ease;
+  -ms-transition: box-shadow 250ms ease;
+  -o-transition: box-shadow 250ms ease;
+}
+#js-mathblocks #js-header .js-menu-toggle:hover{ box-shadow: inset 0 0 0 1px #BBB; }
+#js-mathblocks #js-header .js-menu-toggle i{ color: #000; line-height: 45px; }
+#js-mathblocks #js-header .logo{ color: #000; font-size: 28px; font-weight: normal; height: 50px; line-height: 54px; left: 40px; position: absolute; text-align: center; top: 0; width: 280px; }
+
+/* Board **********************************************************************/
+/******************************************************************************/
+#js-mathblocks #js-board{ height: 320px; left: 2px; position: absolute; right: 0; top: 50px; }
+#js-mathblocks #js-board .block{ background-color: #09F; box-shadow: 1px 2px 0 0 #068; cursor: pointer; float: left; height: 76px; margin: 0 5px 5px 0; transition: background-color 250ms ease, box-shadow 250ms ease; width: 75px;
+  -webkit-transition: background-color 250ms ease, box-shadow 250ms ease;
+  -moz-transition: background-color 250ms ease, box-shadow 250ms ease;
+  -ms-transition: background-color 250ms ease, box-shadow 250ms ease;
+  -o-transition: background-color 250ms ease, box-shadow 250ms ease;
+}
+#js-mathblocks.js-no-touch #js-board .block:hover{ background-color: #07B; }
+#js-mathblocks.js-no-touch #js-board .block.js-selected{ background-color: #084; }
+#js-mathblocks #js-board .block.js-selected{ background-color: #084; }
+#js-mathblocks #js-board .block.js-selected{ box-shadow: none; }
+#js-mathblocks #js-board .block.last-row{ margin-bottom: 0; }
+#js-mathblocks #js-board .block.last-column{ margin-right: 0; }
+#js-mathblocks #js-board .block div{ bottom: 0; color: #FFF; font-size: 20px; height: 40px; left: 0; line-height: 40px; margin: auto; pointer-events: none; position: absolute; text-align: center; text-shadow: 1px 1px 0 #068; top: 0; transition: text-shadow 250ms ease; width: 100%;
+  -webkit-transition: text-shadow 250ms ease;
+  -moz-transition: text-shadow 250ms ease;
+  -ms-transition: text-shadow 250ms ease;
+  -o-transition: text-shadow 250ms ease;
+}
+#js-mathblocks #js-board .block.js-selected div{ text-shadow: none; }
+
+/* Footer *********************************************************************/
+/******************************************************************************/
+#js-mathblocks #js-footer{ border-bottom: 1px solid #BBB; bottom: 0; height: 110px; left: 0; position: absolute; width: 100%; }
+#js-mathblocks #js-footer #js-result{ color: #000; font-size: 60px; height: 90px; left: 0; line-height: 94px; margin: 0 auto 0 auto; position: absolute; right: 0; text-align: center; top: 10px; width: 110px; }
+#js-mathblocks #js-footer #js-evaluate{ height: 90px; position: absolute; right: 0; text-align: center; top: 10px; width: 75px; }
+#js-mathblocks #js-footer #js-evaluate i{ color: #BBB; line-height: 90px; transition: color 250ms ease;
+  -webkit-transition: color 250ms ease;
+  -moz-transition: color 250ms ease;
+  -ms-transition: color 250ms ease;
+  -o-transition: color 250ms ease;
+}
+#js-mathblocks #js-footer #js-evaluate.js-selected i{ color: #084; cursor: pointer; }
+#js-mathblocks #js-footer #js-evaluate.js-selected i:active{ color: #0A6; }
+
+/* Overlay ***********************************************************************/
+/******************************************************************************/
+#js-mathblocks .overlay{ background-color: #DDD; bottom: 0; left: 0; position: absolute; right: 0; top: 0; transform: translate3d(-100%, 0, 0); transition: transform 250ms ease;
+  -webkit-transform: translate3d(-100%, 0, 0);
+  -moz-transform: translate3d(-100%, 0, 0);
+  -ms-transform: translate3d(-100%, 0, 0);
+  -o-transform: translate3d(-100%, 0, 0);
+  -webkit-transition: transform 250ms ease;
+  -moz-transition: transform 250ms ease;
+  -ms-transition: transform 250ms ease;
+  -o-transition: transform 250ms ease;
+}
+#js-mathblocks .overlay.js-selected{ transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+/* Menu */
+#js-mathblocks #js-menu .button{ background-color: transparent; color: #000; border: none; border-bottom: 1px solid #BBB; cursor: pointer; display: block; font-size: 20px; height: 30px; line-height: 30px; margin: 0 auto 0 auto; text-align: center; transition: border-color 250ms ease, color 250ms ease; width: 200px;
+  -webkit-transition: border-color 250ms ease, color 250ms ease;
+  -moz-transition: border-color 250ms ease, color 250ms ease;
+  -ms-transition: border-color 250ms ease, color 250ms ease;
+  -o-transition: border-color 250ms ease, color 250ms ease;
+}
+#js-mathblocks #js-menu .button.js-resume{ color: #09F; }
+#js-mathblocks #js-menu .button:hover{ color: #07B; }
+#js-mathblocks #js-menu .line{ background-color: #FFF; height: 1px; margin: 0 auto 20px auto; width: 200px; }
+#js-mathblocks #js-menu .menu-header{ height: 40%; left: 0; position: absolute; top: 0; width: 100%; }
+#js-mathblocks #js-menu .menu-header{ height: 45%; padding-top: 15px; }
+#js-mathblocks #js-menu .menu-header .info{ color: #666; font-size: 13px; height: 30px; line-height: 30px; margin-bottom: 20px; text-align: center; }
+#js-mathblocks #js-menu .menu-header .info *{ font-size: 13px; }
+#js-mathblocks #js-menu .menu-footer{ bottom: 0; height: 60%; left: 0; position: absolute; width: 100%; }
+#js-mathblocks #js-menu .menu-footer .info{ color: #000; margin: 20px; }
+#js-mathblocks #js-menu .menu-footer .info .legend{ color: #444; }
+/* Intro */
+#js-mathblocks #js-intro{ background-color: #FFF; }
+#js-mathblocks #js-intro .title{ color: #000; cursor: text; display: none; font-size: 28px; height: 50px; left: 0; line-height: 56px; margin: 0 auto 0 auto; position: absolute; text-align: center; text-shadow: none; top: 100px; width: 100%; }
+#js-mathblocks #js-intro .title *{ color: #000; font-size: 28px; line-height: 56px; }
+
+#language-cs #js-mathblocks #js-intro #js-saved-game { font-size: 20px; }
+#language-cs #js-mathblocks #js-intro #js-saved-game *{ font-size: 20px; }
+
+#js-mathblocks #js-intro .title.js-selected{ display: block; }
+#js-mathblocks #js-intro .title:hover{ color: #000; }
+#js-mathblocks #js-intro .js-start-game{ color: #09F; cursor: pointer; transition: color 250ms ease; }
+#js-mathblocks #js-intro .js-start-game:hover{ color: #07B; }
+#js-mathblocks #js-intro .js-restart-game{ cursor: pointer; transition: color 250ms ease; }
+#js-mathblocks #js-intro .js-restart-game:hover{ color: #07B; }
+#js-mathblocks #js-intro .autosave{ height: 40px; left: 20px; line-height: 40px; position: absolute; top: 150px; }
+#js-mathblocks #js-intro .autosave #js-autosave-toggle{ cursor: pointer; display: block; float: left; height: 20px; margin: 10px 0 10px 0; width: 20px; }
+#js-mathblocks #js-intro .autosave label{ color: #000; cursor: pointer; display: block; float: left; height: 20px; line-height: 20px; margin: 12px 0 8px 5px; }
+#js-mathblocks #js-intro .autosave label:hover{ text-decoration: underline; }
+#js-mathblocks #js-intro .autosave #js-autosave-info-toggle{ color: #09F; cursor: pointer; line-height: 40px; margin-left: 5px; transition: color 250ms ease;
+  -webkit-transition: color 250ms ease;
+  -moz-transition: color 250ms ease;
+  -ms-transition: color 250ms ease;
+  -o-transition: color 250ms ease;
+}
+#js-mathblocks.js-no-touch #js-intro .autosave #js-autosave-info-toggle:hover{ color: #07B; }
+#js-mathblocks #js-intro .autosave #js-autosave-info-toggle.js-selected{ color: #07B; }
+#js-mathblocks.js-no-touch #js-intro .autosave #js-autosave-info-toggle.js-selected{ color: #07B; }
+#js-mathblocks #js-intro #js-autosave-info{ background-color: #DDD; border: 1px solid #BBB; box-shadow: 0 0 10px 0 #BBB; color: #000; display: none; font-size: 11px; font-weight: normal; left: 20px; padding: 10px; position: absolute; width: 130px; top: 190px; z-index: 2; }
+#js-mathblocks #js-intro #js-autosave-info.js-selected{ display: block; }
+#js-mathblocks #js-intro #js-autosave-info a{ font-size: 11px; }
+#js-mathblocks #js-intro .description{ color: #666; left: 20px; position: absolute; right: 20px; text-align: center; top: 220px; }
+#js-mathblocks #js-intro .description pre{ font-family: monospace; margin-bottom: 2px; }
+#js-mathblocks #js-intro .description pre.easy{ background-color: rgba(0, 255, 0, 0.2); }
+#js-mathblocks #js-intro .description pre.medium{ background-color: rgba(255, 208, 0, 0.2); }
+#js-mathblocks #js-intro .description pre.hard{ background-color: rgba(255, 0, 0, 0.2); }
+/* Level fail */
+#js-mathblocks #js-level-fail{ background-color: #FBB; transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+}
+#js-mathblocks #js-level-fail.js-selected{ transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+#js-mathblocks #js-level-fail .button{ background-color: transparent; color: #000; border: none; cursor: pointer; display: block; font-size: 20px; height: 30px; line-height: 30px; margin: 115px auto 0 auto; text-align: center; text-shadow: 1px 1px 0 #FFF; transition: border-color 250ms ease, color 250ms ease; width: 200px;
+  -webkit-transition: border-color 250ms ease, color 250ms ease;
+  -moz-transition: border-color 250ms ease, color 250ms ease;
+  -ms-transition: border-color 250ms ease, color 250ms ease;
+  -o-transition: border-color 250ms ease, color 250ms ease;
+}
+#js-mathblocks #js-level-fail .button:hover{ color: #F00; }
+#js-mathblocks #js-level-fail .image-level-fail{ cursor: pointer; left: 0; margin: 0 auto 0 auto; position: absolute; right: 0; top: 230px; width: 130px; }
+/* Level success */
+#js-mathblocks #js-level-success{ background-color: #BFB; transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+}
+#js-mathblocks #js-level-success.js-selected{ transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+#js-mathblocks #js-level-success .button{ background-color: transparent; color: #000; border: none; cursor: pointer; display: block; font-size: 20px; height: 30px; line-height: 30px; margin: 115px auto 0 auto; text-align: center; text-shadow: 1px 1px 0 #FFF; transition: border-color 250ms ease, color 250ms ease; width: 200px;
+  -webkit-transition: border-color 250ms ease, color 250ms ease;
+  -moz-transition: border-color 250ms ease, color 250ms ease;
+  -ms-transition: border-color 250ms ease, color 250ms ease;
+  -o-transition: border-color 250ms ease, color 250ms ease;
+}
+#js-mathblocks #js-level-success .button:hover{ color: #084; }
+#js-mathblocks #js-level-success .image-level-success{ cursor: pointer; left: 0; margin: 0 auto 0 auto; position: absolute; right: 0; top: 230px; width: 130px; }
+/* Game over */
+#js-mathblocks #js-game-over{ background-color: #FFF; transform: translate3d(100%, 0, 0);
+  -webkit-transform: translate3d(100%, 0, 0);
+  -moz-transform: translate3d(100%, 0, 0);
+  -ms-transform: translate3d(100%, 0, 0);
+  -o-transform: translate3d(100%, 0, 0);
+}
+#js-mathblocks #js-game-over.js-selected{ transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+}
+#js-mathblocks #js-game-over .title{ bottom: 0; color: #000; display: block; font-size: 28px; height: 40px; left: 0; line-height: 40px; margin: 115px auto 0 auto; position: absolute; right: 0; text-align: center; text-shadow: 1px 1px 0 #888; top: 0; width: 240px; }
+#js-mathblocks #js-game-over .image-game-over{ left: 0; margin: 0 auto 0 auto; position: absolute; right: 0; top: 230px; width: 130px; }
