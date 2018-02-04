@@ -1,15 +1,6 @@
 html{ height: 100%; position: static; width: 100%; }
 body{ background-color: #FFF; color: #000; height: 100%; position: static; width: 100%; }
-*{ box-sizing: border-box; font-family: 'Josefin Sans', sans-serif; font-size: 13px; margin: 0 auto; padding: 0; position: relative; 
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  -webkit-tap-highlight-color: transparent;
-}
+*{ box-sizing: border-box; font-family: 'Josefin Sans', sans-serif; font-size: 13px; margin: 0 auto; padding: 0; position: relative; }
 *:focus{ outline: none; }
 a{ color: #07B; transition: color 250ms ease;
   -webkit-transition: color 250ms ease;
@@ -78,6 +69,7 @@ a:hover{ color: #09F; }
 /* Board **********************************************************************/
 /******************************************************************************/
 #js-mathblocks #js-board{ height: 320px; left: 2px; position: absolute; right: 0; top: 50px; }
+#js-mathblocks #js-board *{ -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-tap-highlight-color: rgba(0,0,0,0); -webkit-tap-highlight-color: transparent; }
 #js-mathblocks #js-board .block{ background-color: #09F; box-shadow: 1px 2px 0 0 #068; cursor: pointer; float: left; height: 76px; margin: 0 5px 5px 0; transition: background-color 250ms ease, box-shadow 250ms ease; width: 75px;
   -webkit-transition: background-color 250ms ease, box-shadow 250ms ease;
   -moz-transition: background-color 250ms ease, box-shadow 250ms ease;
